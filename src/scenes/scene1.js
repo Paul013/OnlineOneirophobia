@@ -290,11 +290,11 @@ ground.checkCollisions = true;
 const ground2 = MeshBuilder.CreateGround("ground2", { width: 10, height: 10, subdivisions: 100 }, scene);
 const ground2Material = new PBRMaterial("ground2Material", scene);
 
-ground2Material.albedoTexture = new Texture("../Textures/dream_floor.jpg", scene);
+ground2Material.albedoTexture = new Texture("/Textures/dream_floor.jpg", scene);
 ground2Material.albedoTexture.uScale = 1;
 ground2Material.albedoTexture.vScale = 1;
 
-ground2Material.emissiveTexture = new Texture("../Textures/dream_floor.jpg", scene);
+ground2Material.emissiveTexture = new Texture("/Textures/dream_floor.jpg", scene);
 ground2Material.emissiveTexture.uScale = 1;
 ground2Material.emissiveTexture.vScale = 1;
 
@@ -302,12 +302,12 @@ ground2Material.bumpTexture = null;
 ground2Material.invertNormalMapX = true; 
 ground2Material.invertNormalMapY = true;
 
-ground2Material.metallicTexture = new Texture("../Textures/dream_floor.jpg", scene);
+ground2Material.metallicTexture = new Texture("/Textures/dream_floor.jpg", scene);
 ground2Material.useRoughnessFromMetallicTextureAlpha = false;
 ground2Material.useRoughnessFromMetallicTextureGreen = true;
 ground2Material.roughness = 1;
 
-ground2Material.displacementTexture = new Texture("../Textures/dream_floor.jpg", scene);
+ground2Material.displacementTexture = new Texture("/Textures/dream_floor.jpg", scene);
 ground2Material.displacementScale = 0.2;
 ground2Material.displacementBias = 0;
 
@@ -317,10 +317,10 @@ ground2.checkCollisions = true;
 
 const ceiling = MeshBuilder.CreateGround("ceiling", { width: 10, height: 10 }, scene);
 const ceilingMaterial = new StandardMaterial("ceilingMat", scene);
-ceilingMaterial.diffuseTexture = new Texture("../Textures/toit_diffuse.jpg", scene); // Ajout de la texture
-ceilingMaterial.displacementTexture = new Texture("../Textures/toit_displacement.jpg", scene); // Ajout de la texture
-ceilingMaterial.bumpTexture = new Texture("../Textures/toit_normal.jpg", scene); // Ajout de la texture
-ceilingMaterial.metallicTexture = new Texture("../Textures/toit_rough.jpg", scene);
+ceilingMaterial.diffuseTexture = new Texture("/Textures/toit_diffuse.jpg", scene); // Ajout de la texture
+ceilingMaterial.displacementTexture = new Texture("/Textures/toit_displacement.jpg", scene); // Ajout de la texture
+ceilingMaterial.bumpTexture = new Texture("/Textures/toit_normal.jpg", scene); // Ajout de la texture
+ceilingMaterial.metallicTexture = new Texture("/Textures/toit_rough.jpg", scene);
 ceiling.material = ceilingMaterial;
 ceiling.position = new Vector3(0, 4, 0);
 ceiling.rotation = new Vector3(Math.PI, 0, 0);
@@ -330,10 +330,10 @@ ceiling.checkCollisions = true;
 
 // Matériau PBR pour les murs
 const wallMaterial = new PBRMaterial("wallMat", scene);
-wallMaterial.albedoTexture = new Texture("../Textures/wall_brick_diffuse.jpg", scene);
-wallMaterial.bumpTexture = new Texture("../Textures/wall_brick_normal.jpg", scene);
-wallMaterial.metallicTexture = new Texture("../Textures/wall_brick_roughness.jpg", scene);
-wallMaterial.displacementTexture = new Texture("../Textures/wall_brick_displacement.jpg", scene);
+wallMaterial.albedoTexture = new Texture("/Textures/wall_brick_diffuse.jpg", scene);
+wallMaterial.bumpTexture = new Texture("/Textures/wall_brick_normal.jpg", scene);
+wallMaterial.metallicTexture = new Texture("/Textures/wall_brick_roughness.jpg", scene);
+wallMaterial.displacementTexture = new Texture("/Textures/wall_brick_displacement.jpg", scene);
 wallMaterial.backFaceCulling = false;
 
 
@@ -360,7 +360,7 @@ wall2.checkCollisions = true;
 
 // === Parchemin ===
 const parcheminMaterial = new PBRMaterial("parcheminMat", scene);
-parcheminMaterial.albedoTexture = new Texture("../Textures/ParcheminTableaux.png", scene);
+parcheminMaterial.albedoTexture = new Texture("/Textures/ParcheminTableaux.png", scene);
 parcheminMaterial.albedoTexture.level = 1.0;
 parcheminMaterial.metallic = 0.0;
 parcheminMaterial.roughness = 0.9;
@@ -379,13 +379,13 @@ parchemin.position = new Vector3(3.6, 1.15, 4);         // Juste au-dessus de la
 
 // === Tableau 1 ===
 const tableau1Material = new PBRMaterial("tableau1Mat", scene);
-tableau1Material.albedoTexture = new Texture("../Textures/tableau1.png", scene);
+tableau1Material.albedoTexture = new Texture("/Textures/tableau1.png", scene);
 tableau1Material.albedoTexture.level = 0.8;
 tableau1Material.metallic = 0.0;
 tableau1Material.roughness = 0.8;
-tableau1Material.metallicTexture = new Texture("../Textures/wood_roughness.jpg", scene);
+tableau1Material.metallicTexture = new Texture("/Textures/wood_roughness.jpg", scene);
 tableau1Material.useRoughnessFromMetallicTextureAlpha = false;
-tableau1Material.bumpTexture = new Texture("../Textures/wood_normal.jpg", scene);
+tableau1Material.bumpTexture = new Texture("/Textures/wood_normal.jpg", scene);
 tableau1Material.invertNormalMapX = true;
 tableau1Material.invertNormalMapY = true;
 
@@ -396,13 +396,13 @@ tableau1.material = tableau1Material;
 
 // === Tableau 2 ===
 const tableau2Material = new PBRMaterial("tableau2Mat", scene);
-tableau2Material.albedoTexture = new Texture("../Textures/tableau2.png", scene);
+tableau2Material.albedoTexture = new Texture("/Textures/tableau2.png", scene);
 tableau2Material.albedoTexture.level = 0.8;
 tableau2Material.metallic = 0.0;
 tableau2Material.roughness = 0.8;
-tableau2Material.metallicTexture = new Texture("../Textures/wood_roughness.jpg", scene);
+tableau2Material.metallicTexture = new Texture("/Textures/wood_roughness.jpg", scene);
 tableau2Material.useRoughnessFromMetallicTextureAlpha = false;
-tableau2Material.bumpTexture = new Texture("../Textures/wood_normal.jpg", scene);
+tableau2Material.bumpTexture = new Texture("/Textures/wood_normal.jpg", scene);
 tableau2Material.invertNormalMapX = true;
 tableau2Material.invertNormalMapY = true;
 tableau2Material.backFaceCulling = false;
@@ -414,13 +414,13 @@ tableau2.material = tableau2Material;
 
 // === Tableau 3 ===
 const tableau3Material = new PBRMaterial("tableau3Mat", scene);
-tableau3Material.albedoTexture = new Texture("../Textures/tableau3.png", scene);
+tableau3Material.albedoTexture = new Texture("/Textures/tableau3.png", scene);
 tableau3Material.albedoTexture.level = 0.8;
 tableau3Material.metallic = 0.0;
 tableau3Material.roughness = 0.8;
-tableau3Material.metallicTexture = new Texture("../Textures/wood_roughness.jpg", scene);
+tableau3Material.metallicTexture = new Texture("/Textures/wood_roughness.jpg", scene);
 tableau3Material.useRoughnessFromMetallicTextureAlpha = false;
-tableau3Material.bumpTexture = new Texture("../Textures/wood_normal.jpg", scene);
+tableau3Material.bumpTexture = new Texture("/Textures/wood_normal.jpg", scene);
 tableau3Material.invertNormalMapX = true;
 tableau3Material.invertNormalMapY = true;
 tableau3Material.backFaceCulling = false;
@@ -683,14 +683,14 @@ wall8.checkCollisions = true;
 const doorPBRMaterial = new PBRMaterial("doorPBRMat", scene);
 
 // Texture diffuse (albedo)
-doorPBRMaterial.albedoTexture = new Texture("../Textures/wood_door.jpg", scene);
+doorPBRMaterial.albedoTexture = new Texture("/Textures/wood_door.jpg", scene);
 
 // Texture de rugosité
-doorPBRMaterial.metallicTexture = new Texture("../Textures/wood_roughness.jpg", scene);
+doorPBRMaterial.metallicTexture = new Texture("/Textures/wood_roughness.jpg", scene);
 doorPBRMaterial.roughness = 0.8;
 
 // Normal map
-doorPBRMaterial.bumpTexture = new Texture("../Textures/wood_normal.jpg", scene);
+doorPBRMaterial.bumpTexture = new Texture("/Textures/wood_normal.jpg", scene);
 doorPBRMaterial.invertNormalMapX = true;
 doorPBRMaterial.invertNormalMapY = true;
 
@@ -1302,13 +1302,13 @@ function equipItem(item) {
         case "parchemin":
             // === Parchemin ===
             const parcheminMaterial = new PBRMaterial("parcheminMat", scene);
-            parcheminMaterial.albedoTexture = new Texture("../Textures/ParcheminTableaux.png", scene);
+            parcheminMaterial.albedoTexture = new Texture("/Textures/ParcheminTableaux.png", scene);
             parcheminMaterial.albedoTexture.level = 1.0;
             parcheminMaterial.metallic = 0.0;
             parcheminMaterial.roughness = 0.9;
             parcheminMaterial.invertNormalMapX = true;
             parcheminMaterial.invertNormalMapY = true;
-            parcheminMaterial.emissiveTexture = new Texture("../Textures/ParcheminTableaux.png", scene);
+            parcheminMaterial.emissiveTexture = new Texture("/Textures/ParcheminTableaux.png", scene);
             parcheminMaterial.emissiveColor = new Color3(1, 1, 1); // pleine intensité
 
             // Création du mesh - une fine plane posée sur une table
