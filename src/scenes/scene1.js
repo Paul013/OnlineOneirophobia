@@ -266,7 +266,7 @@ initGame();
 const ground = MeshBuilder.CreateGround("ground", { width: 10, height: 10, subdivisions: 100 }, scene);
 const groundMaterial = new PBRMaterial("groundMaterial", scene);
 
-groundMaterial.albedoTexture = new Texture("../Textures/floor_diffuse.jpg", scene);
+groundMaterial.albedoTexture = new Texture("/Textures/floor_diffuse.jpg", scene);
 groundMaterial.albedoTexture.uScale = 3;
 groundMaterial.albedoTexture.vScale = 3;
 
@@ -274,12 +274,12 @@ groundMaterial.bumpTexture = null;
 groundMaterial.invertNormalMapX = true; 
 groundMaterial.invertNormalMapY = true;
 
-groundMaterial.metallicTexture = new Texture("../Textures/floor_roughness.jpg", scene);
+groundMaterial.metallicTexture = new Texture("/Textures/floor_roughness.jpg", scene);
 groundMaterial.useRoughnessFromMetallicTextureAlpha = false;
 groundMaterial.useRoughnessFromMetallicTextureGreen = true;
 groundMaterial.roughness = 1;
 
-groundMaterial.displacementTexture = new Texture("../Textures/floor_displacement.jpg", scene);
+groundMaterial.displacementTexture = new Texture("/Textures/floor_displacement.jpg", scene);
 groundMaterial.displacementScale = 0.2;
 groundMaterial.displacementBias = 0;
 
